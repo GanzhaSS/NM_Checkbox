@@ -1,0 +1,110 @@
+:root {
+  --primary: #6d5dfc;
+  --primary-light: #8abdff;
+  --primary-dark: #5b0eeb;
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+  --color_btn_primary: #0b5589;
+  --color_frame_hover: #f1f1f1;
+  --color-shadow-dark_40: #474f6166;
+  --color-shadow-dark_100: #484f60;
+  --color-shadow-light_0: #53090900;
+  --color-shadow-light_40: #ffffff66;
+  --color-shadow-light_100: #ffffff;
+  --shadow-flat: 0px 1px 8px var(--color-shadow-dark_40);
+  --shadow-light: 0px 0px 20px -2px var(--color_disabled);
+  --shadow-drop: 4px 4px 8px -2px var(--color-shadow-dark_40),
+      -4px -4px 8px -1px var(--color-shadow-light_100);
+  --shadow-inner: inset -4px -4px 6px -1px var(--color-shadow-light_100),
+      inset 2px 2px 8px -1px var(--color-shadow-dark_40);
+}
+
+.container {
+  display: flex;
+  background: var(--greyLight-1);
+}
+
+.components {
+  padding: 50px;
+}
+
+.switch-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.checkbox {
+  transition: 1s all ease-in;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: repeat(2, 6rem);
+  grid-gap: 3rem;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.first-checkbox-container,
+.second-checkbox-container {
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.first-checkbox-container label,
+.second-checkbox-container label {
+  box-shadow: var(--shadow-drop);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 25px;
+  height: 25px;
+}
+
+.first-checkbox-container label:hover,
+.second-checkbox-container label:hover {
+  box-shadow: none;
+  border: 1px solid var(--color_frame_hover);
+}
+
+.first-checkbox-container label:hover,
+.second-checkbox-container label:hover {
+  box-shadow: none;
+  border: 1px solid var(--color_frame_hover);
+}
+
+.first-checkbox-container label i,
+.second-checkbox-container label i {
+  display: none;
+  font-size: 16px;
+  font-weight: 1200;
+  color: var(--color_btn_primary);
+  transition: 10s ease;
+}
+
+.first-checkbox-container input:checked ~ label,
+.second-checkbox-container input:checked ~ label,
+.first-checkbox-container label:active,
+.second-checkbox-container label:active {
+  box-shadow: var(--shadow-inner);
+  border: 1px transparent solid;
+  color: var(--primary);
+}
+
+.first-checkbox-container input:checked ~ label i,
+.second-checkbox-container input:checked ~ label i {
+  display: inline;
+}/*# sourceMappingURL=style.css.map */
